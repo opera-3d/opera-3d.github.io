@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="OPERA uses pretrained semantic and geometric knowledge to guide single-view 3D reconstruction through lightweight alignment modules.">
+  <meta name="color-scheme" content="light">
+  <title>OPERA · Object Perception Enhances Single-view 3D Reconstruction</title>
+  <link rel="icon" href="static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><a class="wordmark" href="#">OPERA<span class="mark">✳</span></a><nav aria-label="Main navigation"><a href="#background">Background</a><a href="#method">Approach</a><a href="#results">Results</a><a href="#multiview">More qualitative</a></nav><span class="edition">Anonymous supplement</span></header>
+<main id="main">
+  <section class="hero wrap">
+    <p class="eyebrow">PERCEPTION → GENERATION → RECONSTRUCTION</p>
+    <h1>OPERA</h1>
+    <h2>Object Perception Enhances Single-view 3D Reconstruction</h2>
+    <figure class="hero-teaser"><button class="zoom" data-zoom="static/images/teaser.webp" data-description="OPERA · Conceptual overview" aria-label="Enlarge teaser"><img src="static/images/teaser.webp" alt="Conceptual illustration of semantic and depth perception guiding reconstruction of a vase, a helmet and a sculptural bust." width="1672" height="941" fetchpriority="high"></button><figcaption>Semantic and geometric perception for single-view 3D reconstruction. Conceptual illustration.</figcaption></figure>
+    <div class="abstract-copy" aria-labelledby="abstract-title">
+      <h3 id="abstract-title">Abstract</h3>
+      <p>Generative models can produce plausible 3D objects from a single image yet alter the geometry and appearance that make the input object distinctive. Inspired by object perception in human vision, we propose OPERA, a framework that guides multi-view diffusion sampling with pretrained semantic and geometric knowledge through lightweight alignment modules. These modules are trained independently while the generative and perception models remain frozen, allowing multiple signals to be combined at inference without joint fusion training. Our analyses examine how target representation and guidance configuration affect geometry and appearance across datasets and backbones. Together, these results establish a proof of concept for integrating independently trained perception and generation models to improve 3D reconstruction.</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="background" aria-label="Background">
+    <p class="eyebrow">01 / BACKGROUND</p>
+    <p class="story-hook">Imagine standing before The Thinker in a museum and wanting to share its full beauty with friends. A photograph captures only one view, leaving much of its detail and expressive character unseen. What if that single image were enough to reconstruct the sculpture in 3D, letting your friends explore it from every angle?</p>
+    <div class="story-body">
+      <p>The goal is to recover <em>that particular object</em>—its proportions, surface patterns and distinctive features—not merely a plausible object of the same category. This is <strong>instance fidelity</strong>. A single photograph leaves unseen surfaces ambiguous, and generative completion can introduce convincing details that do not belong to the original object. OPERA asks whether knowledge from pretrained perception models can help constrain this completion. Semantic and geometric cues extracted from the input image guide multi-view generation towards the observed object. The interactive examples below let you explore selected guided reconstructions; the comparisons later on show what changes relative to the baseline.</p>
+    </div>
+    <div class="gallery-intro" id="gallery-3d"><h3>From a single image to interactive 3D</h3><p>Choose an object to explore its reconstruction.</p></div>
+    <div class="model-picker" role="group" aria-label="Select a 3D reconstruction">
+      <button class="model-choice active" data-model="2" aria-pressed="true"><img src="static/images/gallery/2.png" alt="" loading="lazy"><span>The Thinker</span></button>
+      <button class="model-choice" data-model="3" aria-pressed="false"><img src="static/images/gallery/3.png" alt="" loading="lazy"><span>Antique book</span></button>
+      <button class="model-choice" data-model="4" aria-pressed="false"><img src="static/images/gallery/4.png" alt="" loading="lazy"><span>Axe</span></button>
+      <button class="model-choice" data-model="5" aria-pressed="false"><img src="static/images/gallery/5.png" alt="" loading="lazy"><span>Helmet</span></button>
+      <button class="model-choice" data-model="6" aria-pressed="false"><img src="static/images/gallery/6.png" alt="" loading="lazy"><span>Marcus bust</span></button>
+      <button class="model-choice" data-model="7" aria-pressed="false"><img src="static/images/gallery/7.png" alt="" loading="lazy"><span>Nefertiti</span></button>
+      <button class="model-choice" data-model="8" aria-pressed="false"><img src="static/images/gallery/8.png" alt="" loading="lazy"><span>Buddha</span></button>
+    </div>
+    <div class="interactive-comparison">
+      <figure class="viewer-input"><figcaption>Input image <span id="model-name">The Thinker</span></figcaption><img id="model-input" src="static/images/gallery/2.png" alt="The Thinker input image" loading="lazy" width="1024" height="1024"></figure>
+      <div class="viewer-output"><div class="viewer-heading"><span>OPERA · 3D reconstruction</span><button id="stop-model" class="text-button" hidden>Unload viewer</button></div>
+        <div class="viewer-stage">
+          <div id="model-cover" class="viewer-cover"><span class="viewer-orbit" aria-hidden="true">↻</span><h3 id="model-cover-title">Explore The Thinker in 3D</h3><p>Rotate, zoom and inspect the reconstructed surface.</p><button id="load-model" class="button">Load interactive model <span aria-hidden="true">↗</span></button><small>Loads a third-party viewer from Sketchfab.</small></div>
+          <iframe id="model-frame" title="The Thinker · OPERA 3D reconstruction" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-note"><p id="model-status" aria-live="polite">Select any thumbnail to load its 3D reconstruction here. Drag to rotate; scroll or pinch to zoom.</p><a id="model-link" href="https://sketchfab.com/3d-models/thinker-dinov3-e6e42b7643b046229ec022a75381d677" target="_blank" rel="noopener noreferrer" class="text-button">Open on Sketchfab ↗</a></div>
+    <noscript><p>The interactive selector requires JavaScript. The Thinker model is available through the Sketchfab link above.</p></noscript>
+  </section>
+
+  <section class="section wrap" id="method" aria-labelledby="method-title">
+    <div class="section-head"><div><p class="eyebrow">02 / APPROACH</p><h2 id="method-title">Let perception guide generation.</h2></div><p>OPERA brings independently trained perceptual capabilities into multi-view diffusion sampling.</p></div>
+    <div class="approach-copy"><p>OPERA adds perceptual guidance to an existing reconstruction pipeline rather than training a replacement generator. Frozen perception models provide semantic and geometric targets from the input image. Lightweight generation–perception alignment modules (GPAMs) predict these targets from intermediate generative features, making their discrepancies usable as sampling-time objectives.</p><p>The representation matters: global semantic vectors and spatial feature maps need different alignment objectives, and a target from the input view cannot be imposed unchanged on every generated viewpoint. Each GPAM is trained independently; their signals can then be used alone or combined at inference without joint fusion training.</p></div>
+    <figure class="paper-figure framework-figure"><button class="zoom" data-zoom="static/images/framework.webp" data-description="OPERA framework · Training and inference" aria-label="Enlarge OPERA framework"><img src="static/images/framework.webp" alt="OPERA framework showing perception targets, generation-perception alignment and latent-space guidance during sampling." loading="lazy" width="1944" height="809"></button><figcaption><strong>OPERA framework.</strong> Perceptual targets guide generation through independently trained alignment modules, while the perception models and generative backbone remain frozen.</figcaption></figure>
+    <div class="method-cards"><article><span class="step">01</span><h3>Extract perceptual targets</h3><p>Frozen perception models describe the input object through language-derived semantic vectors, spatial visual representations, or intermediate depth features.</p></article><article><span class="step">02</span><h3>Learn lightweight alignment</h3><p>A generation–perception alignment module (GPAM) predicts each target from intermediate U-Net features. Each module is trained independently; the underlying models stay frozen.</p></article><article><span class="step">03</span><h3>Guide the sampling state</h3><p>Alignment gradients update the latents. The frozen U-Net then recomputes its prediction before the denoising step. Generated views are used for surface reconstruction.</p></article></div>
+    <div class="sampling" aria-label="One guided sampling step"><span>Noisy latents <i>zₜ</i></span><b aria-hidden="true">→</b><span>Perceptual alignment<br><small>latent update</small></span><b aria-hidden="true">→</b><span>Frozen U-Net<br><small>recompute prediction</small></span><b aria-hidden="true">→</b><span>Denoising step <i>zₜ₋₁</i></span></div>
+    <p class="method-ending">Train the alignment. Keep the knowledge.<br><span>Combine perceptual signals at inference without joint fusion training.</span></p>
+  </section>
+
+  <section class="results-region" id="results" aria-labelledby="results-title">
+    <div class="wrap results-intro"><p class="eyebrow">03 / RESULTS</p><h2 id="results-title">Does perceptual guidance<br>improve reconstruction?</h2><p>We study semantic and depth guidance separately and together on Era3D and Wonder3D, using GSO and OmniObject3D. The central comparison is each backbone with and without OPERA: first in benchmark metrics, then in reconstructed objects and generated views.</p></div>
+  <section class="numbers wrap" aria-labelledby="numbers-title">
+    <div><p class="eyebrow">EXPLORATORY BENCHMARK RESULTS</p><h2 id="numbers-title">Perception makes<br>a measurable difference.</h2><p>Mean Chamfer Distance reduction with combined guidance on the primary backbone, Era3D, relative to its unguided baseline.</p></div>
+    <div class="stat"><strong>30.4<span>%</span></strong><h3>Google Scanned Objects</h3><p>30 evaluated objects</p></div>
+    <div class="stat"><strong>24.8<span>%</span></strong><h3>OmniObject3D</h3><p>100 evaluated objects</p></div>
+  </section>
+  <section class="showcase wrap" id="fidelity" aria-labelledby="showcase-title">
+    <div class="section-head"><div><p class="eyebrow">RESULTS / OBJECT-SPECIFIC FIDELITY</p><h2 id="showcase-title">The details make the object.</h2></div><p>A method for guiding an existing reconstruction pipeline, not a new reconstruction backbone.</p></div>
+    <div class="choice-row" role="group" aria-label="Select an example">
+      <button class="choice active" data-example="book" aria-pressed="true">01 · Antique book</button>
+      <button class="choice" data-example="helmet" aria-pressed="false">02 · Helmet</button>
+      <button class="choice" data-example="bust" aria-pressed="false">03 · Marcus bust</button>
+      <button class="choice" data-example="axe" aria-pressed="false">04 · Axe</button>
+      <button class="choice" data-example="sculpture" aria-pressed="false">05 · Four-faced sculpture</button>
+      <button class="choice" data-example="thinker" aria-pressed="false">06 · The Thinker</button>
+    </div>
+    <div class="comparison">
+      <figure><figcaption>Input image</figcaption><div class="object-tile"><img src="static/images/objects/book-input.webp" alt="Antique book input image" data-role="input"></div></figure>
+      <figure><figcaption>Baseline <span>Era3D</span></figcaption><div class="object-tile"><img src="static/images/objects/book-baseline.webp" alt="Antique book reconstructed by Era3D" data-role="baseline"></div></figure>
+      <figure class="ours"><figcaption>OPERA (Ours) <span>Era3D + guidance</span></figcaption><div class="object-tile"><img src="static/images/objects/book-opera.webp" alt="Antique book reconstructed by Era3D with OPERA" data-role="opera"></div></figure>
+      <figure><figcaption>Ground truth</figcaption><div class="object-tile"><img src="static/images/objects/book-gt.webp" alt="Antique book ground-truth reference" data-role="gt"></div></figure>
+      <figure class="external-reference"><figcaption>SAM 3D Objects <span>Reference</span></figcaption><div class="object-tile"><img src="static/images/objects/book-sam3d.webp" alt="Antique book reconstructed by SAM 3D Objects, external reference" data-role="sam3d"></div></figure>
+    </div>
+    <div class="gallery-note"><p id="example-note" aria-live="polite">Guidance reduces the bulk of the book reconstruction, bringing its proportions closer to the reference.</p><button class="text-button" data-zoom="static/images/reconstruction-full.webp" data-description="All six objects · Original reconstruction comparison">View all objects ↗</button></div>
+    <p class="reference-note">Era3D with and without OPERA is the same-backbone comparison. SAM 3D Objects is an external image-to-3D reference. Individual renders are fitted to the display tiles; use the full figure to inspect the original presentation.</p>
+    <noscript><p>Enable JavaScript to switch examples; the book comparison is shown above.</p></noscript>
+  </section>
+  <section class="section wrap" id="modalities" aria-labelledby="modalities-title">
+    <div class="section-head"><div><p class="eyebrow">RESULTS / COMPLEMENTARY SIGNALS</p><h2 id="modalities-title">Semantic understanding.<br>Geometric structure.</h2></div><p>Guide with semantic or depth information separately—or bring them together during sampling.</p></div>
+    <figure class="paper-figure"><button class="zoom" data-zoom="static/images/modalities.png" data-description="Foreground RGB error across six generated views" aria-label="Enlarge modality comparison"><img src="static/images/modalities.png" alt="Six-view foreground error maps for Era3D, depth guidance, semantic guidance and combined guidance, followed by ground-truth RGB views." loading="lazy" width="6000" height="2966"></button><figcaption><strong>Lower error across the six-view set.</strong> In this selected example, combined guidance has the lowest mean foreground RGB error. Heatmaps compare directly generated images with ground truth; lighter colours indicate lower error. The gain varies by view.</figcaption></figure>
+  </section>
+  </section>
+
+  <section class="section gallery-section" id="multiview" aria-labelledby="multiview-title">
+    <div class="wrap"><div class="section-head"><div><p class="eyebrow">04 / MORE QUALITATIVE RESULTS</p><h2 id="multiview-title">Across objects, datasets<br>and viewpoints.</h2></div><p>Selected colour and normal outputs with combined guidance, across two backbones and three datasets.</p></div>
+    <div class="choice-row" role="group" aria-label="Choose a dataset"><button class="choice active" data-dataset="objaverse" aria-pressed="true">Objaverse <span>Era3D</span></button><button class="choice" data-dataset="gso" aria-pressed="false">GSO <span>Wonder3D</span></button><button class="choice" data-dataset="omni" aria-pressed="false">OmniObject3D <span>Era3D</span></button></div>
+    <figure class="paper-figure"><button id="dataset-zoom" class="zoom" data-zoom="static/images/objaverse.png" data-description="Objaverse · Era3D with combined guidance" aria-label="Enlarge multi-view gallery"><img id="dataset-image" src="static/images/objaverse.png" alt="Four Objaverse examples: input followed by six colour views and six normal maps generated by Era3D with combined guidance." loading="lazy"></button><figcaption id="dataset-caption" aria-live="polite">Objaverse · Era3D + combined guidance. Input image at left; generated colour views above their corresponding normal maps. Click the image to inspect details.</figcaption></figure></div>
+  </section>
+</main>
+<footer class="wrap"><a class="wordmark" href="#">OPERA<span class="mark">✳</span></a><p>Object Perception Enhances Single-view 3D Reconstruction</p><span>Anonymous supplementary website · Selected results</span></footer>
+<dialog id="lightbox" aria-label="Enlarged research figure"><div class="lightbox-bar"><p id="lightbox-title"></p><button id="close-lightbox" autofocus aria-label="Close enlarged figure">Close ×</button></div><img id="lightbox-image" alt=""></dialog>
+</body>
+</html>
