@@ -18,6 +18,5 @@ body{font-family:Georgia,'Times New Roman',serif}.hero h2,.method-ending span{fo
 #background .story-hook{margin:20px auto 30px;text-align:center}
 /* Scale the opening visual to the available desktop height, not a fixed tiny tile. */
 :root{--section-label-size:23px}
-.hero-actions{display:flex;justify-content:center;margin:12px 0 0}.code-soon{font-family:inherit;font-size:14px;line-height:1.2;padding:9px 18px;border:1px solid #747c55;border-radius:6px;background:#efeee6;color:#424833;opacity:1;cursor:default}
 .abstract-copy h3,#background>.eyebrow,#method>.section-head>div>.eyebrow,.results-intro>.eyebrow,#multiview>.wrap>.section-head>div>.eyebrow{font-size:var(--section-label-size);font-weight:400;letter-spacing:0;line-height:1.2;color:var(--ink)}
 @media(min-width:761px){.hero{min-height:calc(100svh - 79px);padding:20px 0 30px}.hero-teaser{width:clamp(280px,calc((100svh - 480px)*1.777),700px);max-width:100%;margin:18px auto 16px}.hero-teaser figcaption{font-size:10px}.abstract-copy{max-width:1040px;margin-top:18px}.abstract-copy p{font-size:16px;line-height:1.6}.abstract-copy h3{margin-bottom:12px}}
