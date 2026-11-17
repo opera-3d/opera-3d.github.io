@@ -177,20 +177,20 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "d3fb26b300334f41a2a9b87ae43658bf",
      "poster": "static/images/flow/si01_triceratops_view2/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 953859
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "8bd3a9b582c141849844f0ea6cbf41cf",
      "poster": "static/images/flow/si01_triceratops_view2/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 967602
     },
     "material_only": {
@@ -207,20 +207,20 @@
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "376b9a0a7ee14db38a16fced120c3517",
      "poster": "static/images/flow/si01_triceratops_view2/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 498768
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "2d61900f56ae4fff94d50c449e42de4a",
      "poster": "static/images/flow/si01_triceratops_view2/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 209804
     }
    }
@@ -252,20 +252,20 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "c19f844cbaf641bf9357211eadcda877",
      "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 968277
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "8228a6ce177d402b93e38cc9c4d3481c",
      "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 974738
     },
     "material_only": {
@@ -282,20 +282,20 @@
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "56529693e1d44958b75b5fe98e56b2f4",
      "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 475081
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "2f5b1e17984341c0a90765bc1706230b",
      "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 230266
     }
    }
@@ -372,56 +372,56 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "edfaa7b1adad4bd299c26a34ee8e62d2",
      "poster": "static/images/flow/ov13_10_lymphatic_system/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 959039
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "26ca6624205b403ea9c885a476fcae7b",
      "poster": "static/images/flow/ov13_10_lymphatic_system/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 943732
     },
     "material_only": {
      "status": "not_guided_fallback",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "84a07e1232a1452bb826c5da38604b52",
      "poster": "static/images/flow/ov13_10_lymphatic_system/material_only.webp",
      "note": "Camera gate switched guidance off for this object: this is the unguided fallback, not a guided result.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 958209
     },
     "opera_combined": {
      "status": "not_guided_fallback",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "6268d8065a474a08a4f059923ec4c4da",
      "poster": "static/images/flow/ov13_10_lymphatic_system/opera_combined.webp",
      "note": "Camera gate switched guidance off for this object: this is the unguided fallback, not a guided result.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 944100
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "639ff92d26c64693abceb9cb53ae2b3f",
      "poster": "static/images/flow/ov13_10_lymphatic_system/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 495438
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "33330cafbf4c4b58ad37670db7f0c0ef",
      "poster": "static/images/flow/ov13_10_lymphatic_system/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 112098
     }
    }
@@ -483,20 +483,20 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "fb7a3cdb44b34e7d8e4a2b836018efe4",
      "poster": "static/images/flow/si05_corallium/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 989348
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "d1e491d67ac44187bc04d90b0cc12d16",
      "poster": "static/images/flow/si05_corallium/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 981614
     },
     "material_only": {
@@ -513,20 +513,20 @@
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "df48c20ceff24b1e8d722b409bb4b85d",
      "poster": "static/images/flow/si05_corallium/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 496396
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "79376c524fd8472db69c2601ebafbe74",
      "poster": "static/images/flow/si05_corallium/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 408734
     }
    }
@@ -558,56 +558,56 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "9f902b8e1c59401ba3b83a4d0030d363",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 981934
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "7f7e52deb16444ce8ebcd3e5958c6173",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 984021
     },
     "material_only": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "5b81d544d8fa4d53b626e5d22ec2e280",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/material_only.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 981924
     },
     "opera_combined": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "b5c56ddcdb3446ae9045c499b9d1429c",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/opera_combined.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 984201
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "63ab7ba539294816b2f15e7aafc730f7",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 467586
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "e4e1fab9d0a94fb2ae02547ee758aee5",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 358952
     }
    }
@@ -639,11 +639,11 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "876ccd9aaa674a6cb7289380a8ad976f",
      "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 965192
     },
     "structure": {
@@ -654,11 +654,11 @@
     },
     "material_only": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "5c5d87ea18a04e1fa243efbc56cfd4a6",
      "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/material_only.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 966145
     },
     "opera_combined": {
@@ -669,20 +669,20 @@
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "f5017c52f5d141b6a606704c50fcea84",
      "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 471588
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "dc31957865df49f78f9d42568f89b569",
      "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 540986
     }
    }
@@ -723,47 +723,47 @@
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "8d59efc86e7e4f2783b4c60119503d6a",
      "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 989450
     },
     "material_only": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "16f4bad5d3ac4cd5b9129b4caf17a3db",
      "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/material_only.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 994582
     },
     "opera_combined": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "9eff70d9235748fc87685dfda11770eb",
      "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/opera_combined.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 990516
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "8294f62c76af44fdaed891a6fb0d8ab5",
      "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 478404
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "eb70a715a14c4e119fdd7e1711dc27be",
      "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 389216
     }
    }
@@ -795,56 +795,56 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "6d7a87f871324763bef6d9ba6162ca23",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 940570
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "482f6c760e5e4fdb82fc5b6c56767f07",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 922385
     },
     "material_only": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "4d2e467734f24d7db2179fd7fd1ed28f",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/material_only.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 931233
     },
     "opera_combined": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "4b3c95b2752846dea87ff6557535470e",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/opera_combined.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 922780
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "84df86c607ac4b44aaa5b9bc9fb21df4",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 485247
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "6b0a8027049142608e906304fdc7282b",
      "poster": "static/images/flow/ov13_06_statue_of_liberty/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 192410
     }
    }
@@ -876,56 +876,56 @@
     },
     "stock": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "bae99d494cbe4997bee00cbdca288679",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/stock.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 978629
     },
     "structure": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "349d53904ce14693bf26536e05cb8527",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/structure.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 996190
     },
     "material_only": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "f4dc3529af694002aeac5bae2257544d",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/material_only.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 977703
     },
     "opera_combined": {
      "status": "guided",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "e37609794e74419988243597bf4b809c",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/opera_combined.webp",
      "note": "",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 996178
     },
     "reconviagen_v0.5": {
      "status": "available",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "f8dfd3ae1c674a3fb9b590c611f93a3c",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/reconviagen_v0_5.webp",
      "note": "Official release settings.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 497779
     },
     "hi3dgen": {
      "status": "geometry_only",
-     "sketchfab_uid": "",
+     "sketchfab_uid": "ea401eb5ab0249be94fc9bb9e292a888",
      "poster": "static/images/flow/ov13_02_armillary_sphere_1771/hi3dgen.webp",
      "note": "Geometry only: this method outputs no texture.",
      "frame_note": "",
-     "pending_note": "Interactive model not yet published; still render shown.",
+     "pending_note": "",
      "triangles": 537674
     }
    }

@@ -1,6 +1,6 @@
 # OPERA paper evidence (for the website Evidence section)
 
-Source: `/Users/yhuynh/Downloads/OPERA.pdf (70 pages, PDF created 2026-11-17)`. Machine-readable twin: `docs/paper_evidence.json`.
+Source: `OPERA.pdf (70 pages, PDF created 2026-11-17)`. Machine-readable twin: `docs/paper_evidence.json`.
 
 All values copied as printed in the PDF text layer. No statistics were computed, re-rounded or inferred. Percentages/deltas appear only where the paper prints them. Bold/best-value markup of the tables is not transcribed.
 

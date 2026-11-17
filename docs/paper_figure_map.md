@@ -1,6 +1,6 @@
 # OPERA paper figure map
 
-Source PDF: `/Users/yhuynh/Downloads/OPERA.pdf` (70 pages, PDF created 2026-11-17; read-only).
+Source PDF: `OPERA.pdf` (70 pages, PDF created 2026-11-17; read-only).
 All exports live in `static/images/paper/`.
 
 **Source of every export: PDF page render, cropped.** Each page was rasterised with PyMuPDF at 7.5x (540 dpi),
