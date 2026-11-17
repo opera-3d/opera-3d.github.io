@@ -35,24 +35,22 @@ html = f'''<!doctype html>
   <meta name="color-scheme" content="light">
   <title>OPERA · Perceptual alignment for instance-faithful single-image 3D generation</title>
   <link rel="icon" href="static/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="static/style.css?v=20261117c">
+  <link rel="stylesheet" href="static/style.css?v=20261117e">
   <script src="static/app.js?v=20261117" defer></script>
-  <script src="static/gallery.js?v=20261117c" defer></script>
+  <script src="static/gallery.js?v=20261117e" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><a class="wordmark" href="#">OPERA<span class="mark">✳</span></a><nav aria-label="Main navigation"><a href="#motivation">Motivation</a><a href="#method">Approach</a><a href="#explore">Explore 3D</a><a href="#components">Components</a><a href="#evidence">Evidence</a><a href="#resources">Resources</a></nav><span class="edition">Anonymous supplement</span></header>
 <main id="main">
-  <section class="hero hero-v2 wrap">
-    <div class="hero-text">
-      <p class="eyebrow">PERCEPTION → GENERATION</p>
-      <h1>OPERA</h1>
-      <h2>Object Perception Enhances Single-view 3D Reconstruction</h2>
-      <p class="hero-copy">Perceptual alignment for <em>instance-faithful</em> single-image 3D generation, across multiview diffusion and native 3D flow matching.</p>
-      <p class="intro">Lightweight alignment modules connect a frozen 3D generator to frozen perception models. At sampling time, the mismatch with what perception sees in the input image steers generation towards <em>that</em> object. No backbone is retrained.</p>
-      <div class="hero-actions"><a class="button" href="#explore">Explore 3D <span aria-hidden="true">↓</span></a><span class="pending-link" title="Links will be added when the paper and code are public">Paper · forthcoming</span><span class="pending-link">Code · forthcoming</span></div>
-    </div>
-    <figure class="hero-teaser"><button class="zoom" data-zoom="{P}fig01_teaser.webp" data-description="Figure 1 · OPERA overview" aria-label="Enlarge Figure 1"><img src="{P}fig01_teaser.webp" alt="Figure 1 of the paper: perception models guide single-image 3D generation towards the object in the input image." width="2939" height="2963" fetchpriority="high"></button><figcaption>Figure 1 of the paper.</figcaption></figure>
+  <section class="hero hero-v3 wrap">
+    <p class="eyebrow">PERCEPTION → GENERATION</p>
+    <h1>OPERA</h1>
+    <h2>Object Perception Enhances Single-view 3D Reconstruction</h2>
+    <p class="hero-abstract">We propose OPERA, a unified perceptual alignment framework that turns pretrained perceptual knowledge into explicit guidance for instance-faithful 3D generation. Lightweight alignment modules map intermediate generative representations to perceptual representations, allowing discrepancies with input-derived targets to guide the sampling trajectory. This principle supports gradient-based denoising guidance for multiview diffusion and velocity guidance for native 3D flow matching, while keeping both generative backbones and perception models frozen.</p>
+    <div class="hero-actions"><a class="button" href="#explore">Explore 3D <span aria-hidden="true">↓</span></a><span class="pending-link" title="Links will be added when the paper and code are public">Paper · forthcoming</span><span class="pending-link">Code · forthcoming</span><button class="text-button" id="abstract-toggle" aria-expanded="false" aria-controls="abstract-full">Full abstract</button><a class="text-button" href="static/paper/opera_teaser.pdf" target="_blank" rel="noopener">Teaser (PDF) ↗</a></div>
+    <div class="abstract-full" id="abstract-full" hidden><h3>Abstract</h3><p>Recent advances in single-image 3D generation produce visually plausible objects, yet preserving the geometry and appearance of the input instance remains challenging. Pretrained perception models offer rich knowledge for addressing this problem, but incorporating that knowledge into 3D generation often requires costly adaptation and designs specific to individual backbones. We propose OPERA, a unified perceptual alignment framework that turns pretrained perceptual knowledge into explicit guidance for instance-faithful 3D generation. Lightweight alignment modules map intermediate generative representations to perceptual representations, allowing discrepancies with input-derived targets to guide the sampling trajectory. This principle supports gradient-based denoising guidance for multiview diffusion and velocity guidance for native 3D flow matching, while keeping both generative backbones and perception models frozen. We instantiate OPERA on the state-of-the-art backbones Era3D and TRELLIS.2, developing alignment mechanisms that capture relationships across views and modalities, and the sequential dependencies of structure and material generation. Extensive experiments on GSO, OmniObject3D, and Toys4K demonstrate improvements in geometry and appearance, with OPERA achieving the strongest instance fidelity among the evaluated systems. Further evaluations across cultural heritage, medical anatomy, and insects demonstrate cross-dataset generalization without additional training on the target domains. These results establish OPERA as an effective and adaptable framework for guiding pretrained 3D generators, and lay the foundation for broader generative frameworks that integrate perceptual knowledge through alignment mechanisms tailored to the underlying generative backbones.</p></div>
+    <figure class="hero-teaser"><button class="zoom" data-zoom="static/images/teaser_v2.webp" data-description="OPERA teaser" aria-label="Enlarge the teaser"><img src="static/images/teaser_v2_1600.webp" alt="OPERA teaser: a museum scene with plinths labelled Archaeology, Medical, Art and Biology carrying a Triceratops and a mammoth skeleton, an anatomical skeleton, statues, a tortoise and corals around the word OPERA." width="1600" height="901" fetchpriority="high"></button></figure>
   </section>
 
   <span id="background"></span>

@@ -73,3 +73,16 @@ table.evidence{font-size:12px}.tabs .choice span{display:none}}
 @media(max-width:760px){.fg-compare{grid-template-columns:1fr}.fg-compare .viewer-stage{height:360px}.fg-compare .fg-input{grid-template-columns:1fr 130px}.fg-compare .fg-input>img{height:130px}.fg-viewer[data-slot="b"]{display:none}.fg-viewer[data-slot="gt"]{display:block}.fg-compare.link-only .fg-linkonly{grid-column:auto}}
 .fg-gt .fg-foot{display:block}.fg-gt .fg-foot a{display:inline-block;margin-top:6px}
 .fg-gt .fg-foot a{display:block;width:fit-content}
+/* ---- hero v3 (2026-11-17): title + concise abstract + whole teaser on the first laptop screen ---- */
+.nav{padding:10px 40px}
+.hero-v3{display:block;text-align:center;min-height:0!important;padding:14px 0 20px!important}
+.hero-v3>.eyebrow{margin-bottom:6px;font-size:9px}
+.hero-v3 h1{font-size:clamp(40px,4.2vw,56px);line-height:1}
+.hero-v3 h2{font-size:clamp(16px,1.5vw,20px);color:var(--muted);margin-top:6px;white-space:normal;letter-spacing:-.01em}
+.hero-abstract{max-width:1000px;margin:12px auto 0;font-size:15px;line-height:1.55;color:#454a40}
+.hero-v3 .hero-actions{justify-content:center;margin-top:12px;gap:14px}.hero-v3 .hero-actions .button{padding:9px 18px}.hero-v3 .pending-link{padding:8px 12px}
+.abstract-full{max-width:1000px;margin:14px auto 0;text-align:left;border-top:1px solid var(--line);padding-top:12px}.abstract-full h3{font-family:Georgia,serif;font-size:19px;margin-bottom:8px;text-align:center}.abstract-full p{font-size:15px;line-height:1.7;color:#454a40}
+.hero-v3 .hero-teaser{width:min(100%,1040px,calc((100svh - 372px)*1.7768))!important;max-width:100%;margin:14px auto 0!important;border-radius:7px;overflow:hidden}
+.hero-v3 .hero-teaser img{width:100%;height:auto;aspect-ratio:1600/901;object-fit:contain;display:block}
+@media(max-width:760px){.nav{padding:10px 18px}.hero-v3{padding:16px 0 24px!important}.hero-v3 h1{font-size:42px}.hero-v3 h2{font-size:17px}.hero-abstract{font-size:14px;line-height:1.6;text-align:left!important;hyphens:none}.hero-v3 .hero-teaser{width:100%!important;margin-top:16px!important}.hero-v3 .hero-actions{gap:10px}}
+@media(max-width:760px){.hero-abstract{hyphens:none!important;text-align:left!important}}

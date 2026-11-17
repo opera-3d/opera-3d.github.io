@@ -116,3 +116,7 @@ document.querySelectorAll('[data-tabs]').forEach(group => {
     document.querySelectorAll(`[data-panel-of="${group.dataset.tabs}"]`).forEach(p => { p.hidden = p.dataset.panel !== b.dataset.tab; });
   }));
 });
+
+// Hero: the full abstract opens on demand (the short one stays visible).
+(function () { const b = document.querySelector('#abstract-toggle'), p = document.querySelector('#abstract-full'); if (!b || !p) return;
+  b.addEventListener('click', () => { p.hidden = !p.hidden; b.setAttribute('aria-expanded', String(!p.hidden)); b.textContent = p.hidden ? 'Full abstract' : 'Hide full abstract'; }); })();
