@@ -10,7 +10,10 @@
   const $ = s => root.querySelector(s);
   const ORDER = data.method_order, LABEL = data.method_labels;
   const objects = data.objects, byId = Object.fromEntries(objects.map(o => [o.id, o]));
-  const state = { group: null, id: null, slot: { a: null, b: null }, loaded: { a: false, b: false } };
+  const state = { group: null, id: null, slot: { a: null, b: null }, loaded: { a: false, b: false, gt: false } };
+  const SLOTS = ['a', 'b', 'gt'];                                   // gt: fixed ground-truth panel, never a selectable method
+  const rec = s => s === 'gt' ? byId[state.id].gt : byId[state.id].methods[state.slot[s]];
+  const nameOf = s => s === 'gt' ? 'Ground truth' : LABEL[state.slot[s]];
   const usable = m => m && (m.status === 'guided' || m.status === 'available' || m.status === 'not_guided_fallback' || m.status === 'geometry_only');
   const methodsOf = o => ORDER.filter(k => usable(o.methods[k]));
   const tag = m => m.status === 'not_guided_fallback' ? ' · NOT GUIDED fallback' : m.status === 'geometry_only' ? ' · geometry only' : '';
@@ -49,16 +52,28 @@
     el.querySelector('.fg-method-note').textContent = [m.note, m.frame_note].filter(Boolean).join(' ');
   }
   function load(s) {
-    const o = byId[state.id], m = o.methods[state.slot[s]], el = slotEl(s); if (!m.sketchfab_uid) return;
-    const f = el.querySelector('iframe'); f.title = `${o.name} · ${LABEL[state.slot[s]]} · interactive 3D`;
+    const o = byId[state.id], m = rec(s), el = slotEl(s); if (!m || !m.sketchfab_uid) return;
+    const f = el.querySelector('iframe'); f.title = `${o.name} · ${nameOf(s)} · interactive 3D`;
     f.src = `https://sketchfab.com/models/${m.sketchfab_uid}/embed?autostart=1&ui_theme=dark&ui_infos=0&ui_watermark_link=0`;
     f.hidden = false; el.querySelector('.viewer-cover').hidden = true; el.querySelector('.fg-unload').hidden = false; state.loaded[s] = true;
   }
-  ['a', 'b'].forEach(s => { const el = slotEl(s);
-    el.querySelector('select').addEventListener('change', e => { state.slot[s] = e.target.value; renderSlot(s); renderChips(); });
+  SLOTS.forEach(s => { const el = slotEl(s);
+    if (s !== 'gt') el.querySelector('select').addEventListener('change', e => { state.slot[s] = e.target.value; renderSlot(s); renderChips(); });
     el.querySelector('.viewer-cover .button').addEventListener('click', () => load(s));
     el.querySelector('.fg-unload').addEventListener('click', () => unload(s));
     el.querySelector('.fg-full').addEventListener('click', () => { const st = el.querySelector('.viewer-stage'); (st.requestFullscreen || st.webkitRequestFullscreen || (() => {})).call(st); }); });
+
+  // ---- fixed ground-truth panel: the original author's public model, or a still of the reference scan; never a generated model or the input
+  function renderGT() {
+    const o = byId[state.id], m = o.gt, el = slotEl('gt'); unload('gt'); el.hidden = !m; if (!m) return;
+    const cover = el.querySelector('.viewer-cover'), poster = cover.querySelector('img'), btn = cover.querySelector('.button'), note = cover.querySelector('p'), link = el.querySelector('.fg-link');
+    poster.src = m.poster; poster.alt = `${o.name}: ground truth, still render of the reference scan`;
+    if (m.sketchfab_uid) { btn.hidden = false; note.textContent = 'Loads the original model from its author’s Sketchfab page.';
+      link.hidden = false; link.href = `https://sketchfab.com/3d-models/${m.sketchfab_uid}`; link.textContent = 'Original on Sketchfab ↗'; }
+    else { btn.hidden = true; note.textContent = 'Still of the reference scan (no interactive ground truth is hosted here).';
+      link.hidden = !m.source_url; link.href = m.source_url || '#'; link.textContent = 'Open the source record ↗'; }
+    el.querySelector('.fg-method-note').textContent = m.rights || '';
+  }
 
   // ---- "more comparisons": every method of the object with its true status
   function renderChips() {
@@ -73,7 +88,7 @@
     const o = byId[id]; state.id = id; if (o.group !== state.group) setGroup(o.group, true);
     root.querySelectorAll('.fg-picker .model-choice').forEach(b => { const on = b.dataset.id === id; b.classList.toggle('active', on); b.setAttribute('aria-pressed', String(on)); });
     const lo = !!o.link_only; $('.fg-compare').classList.toggle('link-only', lo); $('.fg-more').hidden = lo;
-    if (lo) { ['a', 'b'].forEach(unload); $('.fg-input img').src = o.input; $('.fg-input img').alt = `${o.name}: input image`; $('.fg-name').textContent = o.name; $('.fg-credit').textContent = o.credit || '';
+    if (lo) { SLOTS.forEach(unload); $('.fg-input img').src = o.input; $('.fg-input img').alt = `${o.name}: input image`; $('.fg-name').textContent = o.name; $('.fg-credit').textContent = o.credit || '';
       const s2 = $('.fg-source'); s2.hidden = !o.source_url; s2.href = o.source_url || '#'; const n2 = $('.fg-native'); n2.hidden = false; n2.href = o.native_gallery;
       $('.fg-linkonly a').href = o.native_gallery; $('.fg-status').textContent = o.note || ''; state.userPicked = true; return; }
     const av = methodsOf(o); state.slot.a = av.includes(o.primary[0]) ? o.primary[0] : av[0]; state.slot.b = av.includes(o.primary[1]) ? o.primary[1] : (av[1] || av[0]);
@@ -82,7 +97,7 @@
     const src = $('.fg-source'); src.hidden = !o.source_url; src.href = o.source_url || '#';
     const nat = $('.fg-native'); nat.hidden = !o.native_gallery; nat.href = o.native_gallery || '#';
     $('.fg-status').textContent = o.note || '';
-    renderSlot('a'); renderSlot('b'); renderChips();
+    renderSlot('a'); renderSlot('b'); renderGT(); renderChips();
     if (location.hash.startsWith('#flow/') || state.userPicked) history.replaceState(null, '', '#flow/' + id);
     state.userPicked = true;
   }

@@ -43,7 +43,6 @@
   "opera_combined",
   "structure",
   "material_only",
-  "gt",
   "reconviagen_v0.5",
   "hi3dgen"
  ],
@@ -74,15 +73,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si02_mammuthus/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 150000
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "6eef11d56e13497f844687fa0f894532",
@@ -137,6 +127,18 @@
      "pending_note": "",
      "triangles": 261108
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si02_mammuthus/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 150000,
+    "original_author_model": false,
+    "source_url": "https://www.si.edu/object/3d/mammuthus-primigenius-blumbach%3A341c96cd-f967-4540-8ed1-d3fc56d31f12",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -155,15 +157,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si01_triceratops_view2/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 150000
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "d3fb26b300334f41a2a9b87ae43658bf",
@@ -212,6 +205,18 @@
      "pending_note": "",
      "triangles": 209804
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si01_triceratops_view2/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 150000,
+    "original_author_model": false,
+    "source_url": "https://www.si.edu/object/3d/triceratops-horridus-marsh-1889%3Ad8c623be-4ebc-11ea-b77f-2e728ce88125",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -230,15 +235,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 150000
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "c19f844cbaf641bf9357211eadcda877",
@@ -287,6 +283,18 @@
      "pending_note": "",
      "triangles": 230266
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 150000,
+    "original_author_model": false,
+    "source_url": "http://n2t.net/ark:/65665/3ad45db08-41db-4185-8c31-f405a56a7952",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -301,6 +309,7 @@
    "thumb": "static/images/flow/ant_124/input.webp",
    "primary": [],
    "methods": {},
+   "gt": null,
    "link_only": true,
    "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
   },
@@ -316,6 +325,7 @@
    "thumb": "static/images/flow/ant_4008/input.webp",
    "primary": [],
    "methods": {},
+   "gt": null,
    "link_only": true,
    "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
   },
@@ -331,6 +341,7 @@
    "thumb": "static/images/flow/ant_392/input.webp",
    "primary": [],
    "methods": {},
+   "gt": null,
    "link_only": true,
    "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
   },
@@ -350,15 +361,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "14800d739ecb46678d7584a401b0aa77",
-     "poster": "static/images/flow/ov13_10_lymphatic_system/gt.webp",
-     "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
-     "frame_note": "",
-     "pending_note": "",
-     "triangles": 994272
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "edfaa7b1adad4bd299c26a34ee8e62d2",
@@ -413,6 +415,18 @@
      "pending_note": "",
      "triangles": 112098
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "14800d739ecb46678d7584a401b0aa77",
+    "poster": "static/images/flow/ov13_10_lymphatic_system/gt.webp",
+    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 994272,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/14800d739ecb46678d7584a401b0aa77",
+    "rights": "Shown through the original public Sketchfab model of its author."
    }
   },
   {
@@ -427,6 +441,7 @@
    "thumb": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/input.webp",
    "primary": [],
    "methods": {},
+   "gt": null,
    "link_only": true,
    "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
   },
@@ -442,6 +457,7 @@
    "thumb": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/input.webp",
    "primary": [],
    "methods": {},
+   "gt": null,
    "link_only": true,
    "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
   },
@@ -461,15 +477,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si05_corallium/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 150000
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "fb7a3cdb44b34e7d8e4a2b836018efe4",
@@ -518,6 +525,18 @@
      "pending_note": "",
      "triangles": 408734
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si05_corallium/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 150000,
+    "original_author_model": false,
+    "source_url": "https://3d.si.edu/object/3d/corallium-secundum%3A4b9420ab-6c2d-432e-9140-ee866175dc87",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -536,15 +555,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 150000
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "9f902b8e1c59401ba3b83a4d0030d363",
@@ -599,6 +609,18 @@
      "pending_note": "",
      "triangles": 358952
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 150000,
+    "original_author_model": false,
+    "source_url": "http://n2t.net/ark:/65665/37c6e7ac3-f28e-4a7f-8730-954b74608719",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -617,15 +639,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "",
-     "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/gt.webp",
-     "note": "Reference scan.",
-     "frame_note": "",
-     "pending_note": "Reference scan: shown as a still; see the source link for the original.",
-     "triangles": 149992
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "876ccd9aaa674a6cb7289380a8ad976f",
@@ -674,6 +687,18 @@
      "pending_note": "",
      "triangles": 540986
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "",
+    "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "triangles": 149992,
+    "original_author_model": false,
+    "source_url": "http://n2t.net/ark:/65665/32d93c49f-3eab-4fa5-8d8f-0a172ef3fcdc",
+    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
    }
   },
   {
@@ -692,15 +717,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "2f4f2bd7ed9a4ce6b10ac0d1fdec8257",
-     "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/gt.webp",
-     "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
-     "frame_note": "",
-     "pending_note": "",
-     "triangles": 224488
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "a090d9816cf041b0aac4676571f8c18a",
@@ -755,6 +771,18 @@
      "pending_note": "",
      "triangles": 389216
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "2f4f2bd7ed9a4ce6b10ac0d1fdec8257",
+    "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/gt.webp",
+    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 224488,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/2f4f2bd7ed9a4ce6b10ac0d1fdec8257",
+    "rights": "Shown through the original public Sketchfab model of its author."
    }
   },
   {
@@ -773,15 +801,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "6626abe1f3e8469a9d8f4b74d8aa2a71",
-     "poster": "static/images/flow/ov13_06_statue_of_liberty/gt.webp",
-     "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
-     "frame_note": "",
-     "pending_note": "",
-     "triangles": 3999999
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "6d7a87f871324763bef6d9ba6162ca23",
@@ -836,6 +855,18 @@
      "pending_note": "",
      "triangles": 192410
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "6626abe1f3e8469a9d8f4b74d8aa2a71",
+    "poster": "static/images/flow/ov13_06_statue_of_liberty/gt.webp",
+    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 3999999,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/6626abe1f3e8469a9d8f4b74d8aa2a71",
+    "rights": "Shown through the original public Sketchfab model of its author."
    }
   },
   {
@@ -854,15 +885,6 @@
     "opera_combined"
    ],
    "methods": {
-    "gt": {
-     "status": "available",
-     "sketchfab_uid": "41e23659c75241459eec6477d9e77c93",
-     "poster": "static/images/flow/ov13_02_armillary_sphere_1771/gt.webp",
-     "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
-     "frame_note": "",
-     "pending_note": "",
-     "triangles": 308898
-    },
     "stock": {
      "status": "available",
      "sketchfab_uid": "bae99d494cbe4997bee00cbdca288679",
@@ -917,6 +939,18 @@
      "pending_note": "",
      "triangles": 537674
     }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "41e23659c75241459eec6477d9e77c93",
+    "poster": "static/images/flow/ov13_02_armillary_sphere_1771/gt.webp",
+    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 308898,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/41e23659c75241459eec6477d9e77c93",
+    "rights": "Shown through the original public Sketchfab model of its author."
    }
   }
  ]

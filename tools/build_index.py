@@ -2,7 +2,7 @@
 """One-off composer of index.html for the OPERA paper site (plan: docs/WEBSITE_PLAN.md). Keeps three blocks of the previous page
 verbatim (Era3D Sketchfab picker, Era3D object comparison, multi-view dataset figure: their ids are used by static/app.js) and
 writes the new page order around them. Numbers are copied from docs/paper_evidence.md (transcribed from the paper), not computed.
-usage: build_index.py <file with the three old blocks separated by a line '====='>"""
+usage: build_index.py tools/legacy_blocks.txt      (the three kept blocks of the previous page, separated by a line =====)"""
 import os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 picker, showcase, multiview = open(sys.argv[1], encoding='utf-8').read().split('\n=====\n')
@@ -35,9 +35,9 @@ html = f'''<!doctype html>
   <meta name="color-scheme" content="light">
   <title>OPERA · Perceptual alignment for instance-faithful single-image 3D generation</title>
   <link rel="icon" href="static/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="static/style.css?v=20261117">
+  <link rel="stylesheet" href="static/style.css?v=20261117c">
   <script src="static/app.js?v=20261117" defer></script>
-  <script src="static/gallery.js?v=20261117" defer></script>
+  <script src="static/gallery.js?v=20261117c" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -91,11 +91,14 @@ html = f'''<!doctype html>
           <figure class="viewer-input fg-input"><figcaption>Input image <span>the only image every method sees</span></figcaption><img alt="" loading="lazy"></figure>
           {viewer('a', 'Method shown in the first viewer')}
           {viewer('b', 'Method shown in the second viewer')}
+          <div class="fg-viewer fg-gt viewer-output" data-slot="gt"><div class="viewer-heading"><span class="fg-gt-title">Ground truth <small>reference, not a generated result</small></span><span class="fg-actions"><button class="text-button fg-full">Fullscreen</button><button class="text-button fg-unload" hidden>Unload</button></span></div>
+        <div class="viewer-stage"><div class="viewer-cover"><img alt="" loading="lazy"><button class="button">Load interactive 3D ↗</button><p></p></div><iframe allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen referrerpolicy="no-referrer" hidden></iframe></div>
+        <div class="fg-foot"><span class="fg-method-note"></span><a class="text-button fg-link" target="_blank" rel="noopener noreferrer" hidden>Open on Sketchfab ↗</a></div></div>
           <div class="fg-linkonly viewer-output"><div class="viewer-cover"><span class="viewer-orbit" aria-hidden="true">↻</span><h3>Shown in the cross-domain gallery</h3><p>The original outputs for this object are not hosted on this page yet.</p><a class="button" target="_blank" rel="noopener noreferrer">Open in the cross-domain gallery ↗</a></div></div>
         </div>
         <div class="fg-more"><p class="fg-more-label">More comparisons</p><div class="choice-row fg-methods" role="group" aria-label="Show another method"></div></div>
         <p class="reference-note fg-status" aria-live="polite"></p>
-        <p class="reference-note">Each viewer is an independent Sketchfab embed: cameras are not synchronised, and models keep the frame they were generated in. For matched-camera views and the surface-normal row, use the research gallery linked above. ReconViaGen and Hi3DGen are external methods run at their release settings; Hi3DGen outputs geometry only.</p>
+        <p class="reference-note">The ground truth is always shown next to the results: the original author’s model where one is public, otherwise a still of the reference scan. Each viewer is an independent Sketchfab embed: cameras are not synchronised, and models keep the frame they were generated in. For matched-camera views and the surface-normal row, use the research gallery linked above. ReconViaGen and Hi3DGen are external methods run at their release settings; Hi3DGen outputs geometry only.</p>
         <noscript><p>The interactive gallery requires JavaScript. The models are listed in the <a href="https://sketchfab.com/idea0907/collections/3f8664bfe9414ad69461e8f6b0f23a47">Sketchfab collection</a>.</p></noscript>
       </div>
 

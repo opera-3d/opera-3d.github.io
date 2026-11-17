@@ -7,7 +7,7 @@ import json, os, sys
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDER = ['stock', 'opera_combined', 'structure', 'material_only', 'gt', 'reconviagen_v0.5', 'hi3dgen']
+ORDER = ['stock', 'opera_combined', 'structure', 'material_only', 'reconviagen_v0.5', 'hi3dgen']      # GT is a fixed third panel (o['gt']), not a selectable method
 # Era3D is a multiview-diffusion result: it is never listed in the flow-matching gallery, whatever the export manifest contains.
 EXCLUDE = {'era3d'}
 LABEL = {'stock': 'TRELLIS.2 (baseline)', 'opera_combined': 'OPERA Combined (ours)', 'structure': 'OPERA + Structure', 'material_only': 'OPERA + Material',
@@ -33,7 +33,7 @@ for d in sys.argv[1:]:
     o = {'id': oid, 'group': m.get('group', 'A'), 'name': m['name'], 'short_name': m.get('short_name', m['name']), 'credit': m.get('credit', ''),
          'source_url': m.get('source_url') or m.get('smithsonian_record'), 'native_gallery': m.get('native_gallery'), 'note': m.get('site_note', ''),
          'input': webp(disp, os.path.join(img, 'input.webp'), 900, (255, 255, 255, 255)), 'thumb': webp(disp, os.path.join(img, 'thumb.webp'), 220, (255, 255, 255, 255)),
-         'primary': ['stock', 'opera_combined'], 'methods': {}}
+         'primary': ['stock', 'opera_combined'], 'methods': {}, 'gt': None}
     for e in m['entries']:
         k = e['key']
         if k in EXCLUDE: continue
@@ -51,8 +51,14 @@ for d in sys.argv[1:]:
             pend = ('Reference scan: shown as a still; see the source link for the original.' if k == 'gt'
                     else 'Not published interactively: the version shown in the linked research gallery could not be certified. Still render of our run shown.' if perm.startswith('UNRESOLVED')
                     else 'Interactive model not yet published; still render shown.')
-        o['methods'][k] = {'status': st, 'sketchfab_uid': uid, 'poster': webp(os.path.join(d, e['thumbnail']), os.path.join(img, k.replace('.', '_') + '.webp'), 640, (244, 243, 239, 255)),
+        rec = {'status': st, 'sketchfab_uid': uid, 'poster': webp(os.path.join(d, e['thumbnail']), os.path.join(img, k.replace('.', '_') + '.webp'), 640, (244, 243, 239, 255)),
                            'note': note, 'frame_note': e.get('site_frame_note', ''), 'pending_note': pend, 'triangles': e.get('triangles')}
+        if k == 'gt':      # true reference only: the original author's public model where one exists, otherwise a still of the study's GT scan
+            rec.update(original_author_model=bool(uid), source_url=o['source_url'],
+                       rights=('Shown through the original public Sketchfab model of its author.' if uid else 'Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown.'))
+            o['gt'] = rec
+        else:
+            o['methods'][k] = rec
     if any(v['status'] == 'held' for v in o['methods'].values()):
         o['note'] = 'Selected example. Some methods are not shown for this object: our stored outputs could not be matched to the versions in the research gallery, which remains the reference for them.'
     objects.append(o)
@@ -69,7 +75,7 @@ for oid, grp, name, short, credit, url in LINK_ONLY:
     if oid in have: continue
     img = f'static/images/flow/{oid}/input.webp'; assert os.path.isfile(os.path.join(ROOT, img)), img
     objects.append({'id': oid, 'group': grp, 'name': name, 'short_name': short, 'credit': credit, 'source_url': url, 'native_gallery': f'https://ood-results.vercel.app/#{oid}',
-                    'input': img, 'thumb': img, 'primary': [], 'methods': {}, 'link_only': True,
+                    'input': img, 'thumb': img, 'primary': [], 'methods': {}, 'gt': None, 'link_only': True,
                     'note': 'Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet.'})
 ORDER_IDS = ['si02_mammuthus', 'si01_triceratops_view2', 'si25v2_a01_brachyceratops_montanensis_gilmo', 'ant_124', 'ant_4008', 'ant_392', 'ov13_10_lymphatic_system',
              'f7aa60639c60483f8e82fc182d2b0514', 'e903b83694d5455da1d71c2943dd7bab', 'si05_corallium', 'si25_17_subhyracodon_gidleyi_wood_1927', 'si25v2_c38_geochelone_carbonaria',
@@ -79,4 +85,4 @@ out = {'built_from': [os.path.basename(os.path.normpath(d)) for d in sys.argv[1:
        'method_order': ORDER, 'method_labels': LABEL, 'default_object': 'si02_mammuthus' if any(o['id'] == 'si02_mammuthus' for o in objects) else objects[0]['id'], 'objects': objects}
 os.makedirs(os.path.join(ROOT, 'static/data'), exist_ok=True)
 json.dump(out, open(os.path.join(ROOT, 'static/data/flow_gallery.json'), 'w'), indent=1)
-print(json.dumps({o['id']: {k: ('3D' if v['sketchfab_uid'] else 'still') for k, v in o['methods'].items()} for o in objects}))
+print(json.dumps({o['id']: {**{k: ('3D' if v['sketchfab_uid'] else 'still') for k, v in o['methods'].items()}, 'GT': ('3D original' if (o.get('gt') or {}).get('sketchfab_uid') else 'still' if o.get('gt') else 'none')} for o in objects}))
