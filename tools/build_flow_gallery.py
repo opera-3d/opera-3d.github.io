@@ -7,9 +7,11 @@ import json, os, sys
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDER = ['stock', 'opera_combined', 'structure', 'material_only', 'gt', 'reconviagen_v0.5', 'hi3dgen', 'era3d']
+ORDER = ['stock', 'opera_combined', 'structure', 'material_only', 'gt', 'reconviagen_v0.5', 'hi3dgen']
+# Era3D is a multiview-diffusion result: it is never listed in the flow-matching gallery, whatever the export manifest contains.
+EXCLUDE = {'era3d'}
 LABEL = {'stock': 'TRELLIS.2 (baseline)', 'opera_combined': 'OPERA Combined (ours)', 'structure': 'OPERA + Structure', 'material_only': 'OPERA + Material',
-         'gt': 'Ground truth', 'reconviagen_v0.5': 'ReconViaGen v0.5', 'hi3dgen': 'Hi3DGen', 'era3d': 'Era3D + NeuS (multiview diffusion)'}
+         'gt': 'Ground truth', 'reconviagen_v0.5': 'ReconViaGen v0.5', 'hi3dgen': 'Hi3DGen'}
 GROUPS = [{'key': 'A', 'label': 'Fossils & Natural History'}, {'key': 'B', 'label': 'Insects · AntScan'}, {'key': 'C', 'label': 'Medical Anatomy'},
           {'key': 'D', 'label': 'Biological Specimens'}, {'key': 'E', 'label': 'Cultural Heritage'}]
 
@@ -34,11 +36,12 @@ for d in sys.argv[1:]:
          'primary': ['stock', 'opera_combined'], 'methods': {}}
     for e in m['entries']:
         k = e['key']
+        if k in EXCLUDE: continue
         st = e.get('site_status') or ('geometry_only' if k == 'hi3dgen' else 'not_guided_fallback' if e.get('guided') is False else 'guided' if k in ('structure', 'material_only', 'opera_combined') else 'available')
         uid = e.get('sketchfab_uid') if e.get('sketchfab_processing') == 'SUCCEEDED' else ''
         if str(e.get('permission', '')).startswith('UNRESOLVED-HOLD'):      # not certified as the linked gallery's version: listed, never displayed
             o['methods'][k] = {'status': 'held', 'status_label': 'not shown here', 'sketchfab_uid': '', 'note': 'Not shown: our stored output could not be matched to the version in the research gallery.'}; continue
-        note = {'hi3dgen': 'Geometry only: this method outputs no texture.', 'era3d': 'Stock Era3D views reconstructed with NeuS; colours are vertex colours.',
+        note = {'hi3dgen': 'Geometry only: this method outputs no texture.',
                 'reconviagen_v0.5': 'Official release settings.', 'gt': 'Reference scan.'}.get(k, '')
         if k == 'gt' and uid: note = 'Original model on its author\'s Sketchfab page, in the author\'s own orientation.'
         if st == 'not_guided_fallback': note = 'Camera gate switched guidance off for this object: this is the unguided fallback, not a guided result.'

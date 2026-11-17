@@ -45,8 +45,7 @@
   "material_only",
   "gt",
   "reconviagen_v0.5",
-  "hi3dgen",
-  "era3d"
+  "hi3dgen"
  ],
  "method_labels": {
   "stock": "TRELLIS.2 (baseline)",
@@ -55,8 +54,7 @@
   "material_only": "OPERA + Material",
   "gt": "Ground truth",
   "reconviagen_v0.5": "ReconViaGen v0.5",
-  "hi3dgen": "Hi3DGen",
-  "era3d": "Era3D + NeuS (multiview diffusion)"
+  "hi3dgen": "Hi3DGen"
  },
  "default_object": "si02_mammuthus",
  "objects": [
@@ -68,7 +66,7 @@
    "credit": "Mammuthus primigenius (Blumbach), Smithsonian Institution, NMNH Paleobiology (Open Access record nmnhpaleobiology_3447777).",
    "source_url": "https://www.si.edu/object/3d/mammuthus-primigenius-blumbach%3A341c96cd-f967-4540-8ed1-d3fc56d31f12",
    "native_gallery": "https://ood-results.vercel.app/#si02_mammuthus",
-   "note": "Selected example. The ground-truth scan and the Era3D mesh sit in their own frames; the TRELLIS.2-family models share the generation frame, so their default view differs by about 90\u00b0.",
+   "note": "Selected example. The ground-truth scan sits in its own frame; the TRELLIS.2-family models share the generation frame, so their default view differs by about 90\u00b0.",
    "input": "static/images/flow/si02_mammuthus/input.webp",
    "thumb": "static/images/flow/si02_mammuthus/thumb.webp",
    "primary": [
@@ -84,15 +82,6 @@
      "frame_note": "",
      "pending_note": "Reference scan: shown as a still; see the source link for the original.",
      "triangles": 150000
-    },
-    "era3d": {
-     "status": "available",
-     "sketchfab_uid": "ce4419b2bf62469c994786ca777a6eb1",
-     "poster": "static/images/flow/si02_mammuthus/era3d.webp",
-     "note": "Stock Era3D views reconstructed with NeuS; colours are vertex colours.",
-     "frame_note": "",
-     "pending_note": "",
-     "triangles": 144764
     },
     "stock": {
      "status": "available",
