@@ -68,8 +68,8 @@
     const o = byId[state.id], m = o.gt, el = slotEl('gt'); unload('gt'); el.hidden = !m; if (!m) return;
     const cover = el.querySelector('.viewer-cover'), poster = cover.querySelector('img'), btn = cover.querySelector('.button'), note = cover.querySelector('p'), link = el.querySelector('.fg-link');
     poster.src = m.poster; poster.alt = `${o.name}: ground truth, still render of the reference scan`;
-    if (m.sketchfab_uid) { btn.hidden = false; note.textContent = 'Loads the original model from its author’s Sketchfab page.';
-      link.hidden = false; link.href = `https://sketchfab.com/3d-models/${m.sketchfab_uid}`; link.textContent = 'Original on Sketchfab ↗'; }
+    if (m.sketchfab_uid) { btn.hidden = false; note.textContent = m.hosted_by_us ? 'Loads the reference scan from Sketchfab.' : 'Loads the original model from its author’s Sketchfab page.';
+      link.hidden = false; link.href = `https://sketchfab.com/3d-models/${m.sketchfab_uid}`; link.textContent = m.hosted_by_us ? 'Open on Sketchfab ↗' : 'Original on Sketchfab ↗'; }
     else { btn.hidden = true; note.textContent = 'Still of the reference scan (no interactive ground truth is hosted here).';
       link.hidden = !m.source_url; link.href = m.source_url || '#'; link.textContent = 'Open the source record ↗'; }
     el.querySelector('.fg-method-note').textContent = m.rights || '';
@@ -116,7 +116,3 @@ document.querySelectorAll('[data-tabs]').forEach(group => {
     document.querySelectorAll(`[data-panel-of="${group.dataset.tabs}"]`).forEach(p => { p.hidden = p.dataset.panel !== b.dataset.tab; });
   }));
 });
-
-// Hero: the full abstract opens on demand (the short one stays visible).
-(function () { const b = document.querySelector('#abstract-toggle'), p = document.querySelector('#abstract-full'); if (!b || !p) return;
-  b.addEventListener('click', () => { p.hidden = !p.hidden; b.setAttribute('aria-expanded', String(!p.hidden)); b.textContent = p.hidden ? 'Full abstract' : 'Hide full abstract'; }); })();

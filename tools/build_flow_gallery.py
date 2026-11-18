@@ -44,6 +44,8 @@ for d in sys.argv[1:]:
         note = {'hi3dgen': 'Geometry only: this method outputs no texture.',
                 'reconviagen_v0.5': 'Official release settings.', 'gt': 'Reference scan.'}.get(k, '')
         if k == 'gt' and uid: note = 'Original model on its author\'s Sketchfab page, in the author\'s own orientation.'
+        if e.get('site_note'): note = e['site_note']                      # provenance recorded with the entry (e.g. decimated paper-run mesh)
+        if k == 'gt' and uid and e.get('gt_hosting') == 'ours': note = 'Reference scan.'
         if st == 'not_guided_fallback': note = 'Camera gate switched guidance off for this object: this is the unguided fallback, not a guided result.'
         pend = ''
         if not uid:
@@ -55,7 +57,8 @@ for d in sys.argv[1:]:
                            'note': note, 'frame_note': e.get('site_frame_note', ''), 'pending_note': pend, 'triangles': e.get('triangles')}
         if k == 'gt':      # true reference only: the original author's public model where one exists, otherwise a still of the study's GT scan
             rec.update(original_author_model=bool(uid), source_url=o['source_url'],
-                       rights=('Shown through the original public Sketchfab model of its author.' if uid else 'Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown.'))
+                       hosted_by_us=e.get('gt_hosting') == 'ours',
+                       rights=e.get('gt_rights') or ('Shown through the original public Sketchfab model of its author.' if uid else 'Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown.'))
             o['gt'] = rec
         else:
             o['methods'][k] = rec

@@ -95,3 +95,14 @@ Each object uses the campaign and version of the gallery it is linked from.
 - Old resources and URLs are preserved where feasible.
 - Other galleries (Vercel) are not replaced.
 - Anything missing (account access, rights, metadata) is stated on the page or in the report, never papered over.
+
+## Amendments (owner steering, 19 Nov 2026)
+
+These override the corresponding lines above.
+
+- **Hero:** title, one abstract paragraph, the teaser as a plain image, and exactly three buttons: Explore 3D, Paper (coming soon), Code (coming soon). No expandable abstract, no teaser lightbox, no PDF button.
+- **Ground truth:** shown from our own Sketchfab account, using our local/RDS GT files (the student release's `gt.glb` where we had none), under the source licence with attribution. An original-author embed or a still remains only where a concrete blocker exists, and the blocker is stated.
+- **Licences:** free download under the per-object source licence was approved on 17 Nov 2026; generated outputs carry the licence of the source object.
+- **Student release:** `Dyrekk/opera-cross-domain-120` at revision `743c809ab8ab` fills missing arms; its TRELLIS.2 stock mesh is preferred as the baseline where the object exists; every other existing result is kept.
+- **Flow gallery:** Era3D is not listed in the flow-matching branch; the ground truth is a fixed third viewer.
+- **Progress:** `docs/WEBSITE_RELEASE_PROGRESS.md`.
