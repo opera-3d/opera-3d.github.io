@@ -9,7 +9,12 @@
   "si05_corallium",
   "si25_17_subhyracodon_gidleyi_wood_1927",
   "si25v2_a01_brachyceratops_montanensis_gilmo",
-  "si25v2_c38_geochelone_carbonaria"
+  "si25v2_c38_geochelone_carbonaria",
+  "ant_124",
+  "ant_392",
+  "ant_4008",
+  "e903b83694d5455da1d71c2943dd7bab",
+  "f7aa60639c60483f8e82fc182d2b0514"
  ],
  "collection": {
   "name": "OPERA - Native 3D Flow Matching",
@@ -65,7 +70,7 @@
    "credit": "Mammuthus primigenius (Blumbach), Smithsonian Institution, NMNH Paleobiology (Open Access record nmnhpaleobiology_3447777).",
    "source_url": "https://www.si.edu/object/3d/mammuthus-primigenius-blumbach%3A341c96cd-f967-4540-8ed1-d3fc56d31f12",
    "native_gallery": "https://ood-results.vercel.app/#si02_mammuthus",
-   "note": "Selected example. The ground-truth scan sits in its own frame; the TRELLIS.2-family models share the generation frame, so their default view differs by about 90\u00b0.",
+   "note": "Selected example. The TRELLIS.2 baseline shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si02_mammuthus/input.webp",
    "thumb": "static/images/flow/si02_mammuthus/thumb.webp",
    "primary": [
@@ -77,10 +82,10 @@
      "status": "available",
      "sketchfab_uid": "6eef11d56e13497f844687fa0f894532",
      "poster": "static/images/flow/si02_mammuthus/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (11,895 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 985069
+     "triangles": 11895
     },
     "structure": {
      "status": "guided",
@@ -130,15 +135,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "7892af1468b3412392483fafd87f6ad2",
     "poster": "static/images/flow/si02_mammuthus/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 150000,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "https://www.si.edu/object/3d/mammuthus-primigenius-blumbach%3A341c96cd-f967-4540-8ed1-d3fc56d31f12",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
@@ -149,7 +155,7 @@
    "credit": "Triceratops horridus Marsh, 1889. Smithsonian Institution, National Museum of Natural History; record nmnhpaleobiology_3572783. Source licence: Smithsonian Open Access, CC0 (usage.access field); see methods.gt.",
    "source_url": "https://www.si.edu/object/3d/triceratops-horridus-marsh-1889%3Ad8c623be-4ebc-11ea-b77f-2e728ce88125",
    "native_gallery": "https://ood-results.vercel.app/#si01_triceratops_view2",
-   "note": "Selected example. Some methods are not shown for this object: our stored outputs could not be matched to the versions in the research gallery, which remains the reference for them.",
+   "note": "Selected example. The TRELLIS.2 baseline and some OPERA results shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si01_triceratops_view2/input.webp",
    "thumb": "static/images/flow/si01_triceratops_view2/thumb.webp",
    "primary": [
@@ -161,10 +167,10 @@
      "status": "available",
      "sketchfab_uid": "d3fb26b300334f41a2a9b87ae43658bf",
      "poster": "static/images/flow/si01_triceratops_view2/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (11,095 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 953859
+     "triangles": 11095
     },
     "structure": {
      "status": "guided",
@@ -176,16 +182,22 @@
      "triangles": 967602
     },
     "material_only": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "340f0936c8eb4e66aabff78dfbbb4ad0",
+     "poster": "static/images/flow/si01_triceratops_view2/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (11,264 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11264
     },
     "opera_combined": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "49e903fabed24e5abbfb0210c5de0d19",
+     "poster": "static/images/flow/si01_triceratops_view2/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (11,683 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11683
     },
     "reconviagen_v0.5": {
      "status": "available",
@@ -208,15 +220,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "0f902df82b8d4f67959f4dee24dbe868",
     "poster": "static/images/flow/si01_triceratops_view2/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 150000,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "https://www.si.edu/object/3d/triceratops-horridus-marsh-1889%3Ad8c623be-4ebc-11ea-b77f-2e728ce88125",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
@@ -227,7 +240,7 @@
    "credit": "Brachyceratops montanensis Gilmore, 1914: Brachyceratops montanensis.. Smithsonian Institution, National Museum of Natural History; record nmnhpaleobiology_3448907. Source licence: Smithsonian Open Access, CC0 (usage.access field); see methods.gt.",
    "source_url": "http://n2t.net/ark:/65665/3ad45db08-41db-4185-8c31-f405a56a7952",
    "native_gallery": "https://ood-results.vercel.app/#si25v2_a01_brachyceratops_montanensis_gilmo",
-   "note": "Selected example. Some methods are not shown for this object: our stored outputs could not be matched to the versions in the research gallery, which remains the reference for them.",
+   "note": "Selected example. The TRELLIS.2 baseline and some OPERA results shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/input.webp",
    "thumb": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/thumb.webp",
    "primary": [
@@ -239,10 +252,10 @@
      "status": "available",
      "sketchfab_uid": "c19f844cbaf641bf9357211eadcda877",
      "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (11,581 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 968277
+     "triangles": 11581
     },
     "structure": {
      "status": "guided",
@@ -254,16 +267,22 @@
      "triangles": 974738
     },
     "material_only": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "bf11e99bc02a478aaa7a78cb03856d91",
+     "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (11,775 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11775
     },
     "opera_combined": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "c17facb1b72b4247a8bcbd898b669d8a",
+     "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (11,699 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11699
     },
     "reconviagen_v0.5": {
      "status": "available",
@@ -286,64 +305,218 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "991e709c87cb4f73af18ac87459885c1",
     "poster": "static/images/flow/si25v2_a01_brachyceratops_montanensis_gilmo/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 150000,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "http://n2t.net/ark:/65665/3ad45db08-41db-4185-8c31-f405a56a7952",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
    "id": "ant_124",
    "group": "B",
    "name": "Eciton rapax (worker)",
-   "short_name": "Army ant",
-   "credit": "AntScan micro-CT, specimen CASENT0744621 (CC BY 4.0).",
-   "source_url": "https://doi.org/10.35097/xvug66q46ybwrx5n",
+   "short_name": "Eciton rapax",
+   "credit": "Eciton rapax (worker). Karlsruhe Institute of Technology (KIT); Okinawa Institute of Science and Technology Graduate University (OIST). Source licence: CC BY 4.0.",
+   "source_url": "https://radar.kit.edu/radar/en/dataset/xvug66q46ybwrx5n",
    "native_gallery": "https://ood-results.vercel.app/#ant_124",
+   "note": "Selected example from the cross-domain campaign. Models are the paper-run meshes as released for the web (reduced detail).",
    "input": "static/images/flow/ant_124/input.webp",
-   "thumb": "static/images/flow/ant_124/input.webp",
-   "primary": [],
-   "methods": {},
-   "gt": null,
-   "link_only": true,
-   "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
+   "thumb": "static/images/flow/ant_124/thumb.webp",
+   "primary": [
+    "stock",
+    "opera_combined"
+   ],
+   "methods": {
+    "stock": {
+     "status": "available",
+     "sketchfab_uid": "3cad3ad2d1674ec587e429d0fc4be187",
+     "poster": "static/images/flow/ant_124/stock.webp",
+     "note": "Paper-run mesh, decimated for the web (99,986 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99986
+    },
+    "structure": {
+     "status": "available",
+     "sketchfab_uid": "e54d650adde648529298e5ae6eb7ab3c",
+     "poster": "static/images/flow/ant_124/structure.webp",
+     "note": "Paper-run mesh, decimated for the web (99,973 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99973
+    },
+    "material_only": {
+     "status": "available",
+     "sketchfab_uid": "0bc74bae99044efe8cbfe1b2ccfd16c4",
+     "poster": "static/images/flow/ant_124/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (99,986 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99986
+    },
+    "opera_combined": {
+     "status": "available",
+     "sketchfab_uid": "f85f381ec02b4c419b42c488e7333f97",
+     "poster": "static/images/flow/ant_124/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (99,975 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99975
+    }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "5eba57c93642449f81448a0529c9e6f8",
+    "poster": "static/images/flow/ant_124/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 4784614,
+    "original_author_model": true,
+    "source_url": "https://radar.kit.edu/radar/en/dataset/xvug66q46ybwrx5n",
+    "hosted_by_us": true,
+    "rights": "Reference scan hosted with attribution under its source licence (CC BY 4.0)."
+   }
   },
   {
    "id": "ant_4008",
    "group": "B",
-   "name": "Parasyscia sp.",
-   "short_name": "Parasyscia",
-   "credit": "AntScan micro-CT, specimen CASENT0877644 (CC BY 4.0).",
-   "source_url": "https://doi.org/10.35097/puntaegngsg4xss9",
+   "name": "Parasyscia sp. (worker)",
+   "short_name": "Parasyscia sp.",
+   "credit": "Parasyscia sp. (worker). Karlsruhe Institute of Technology (KIT); Okinawa Institute of Science and Technology Graduate University (OIST). Source licence: CC BY 4.0.",
+   "source_url": "https://radar.kit.edu/radar/en/dataset/puntaegngsg4xss9",
    "native_gallery": "https://ood-results.vercel.app/#ant_4008",
+   "note": "Selected example from the cross-domain campaign. Models are the paper-run meshes as released for the web (reduced detail).",
    "input": "static/images/flow/ant_4008/input.webp",
-   "thumb": "static/images/flow/ant_4008/input.webp",
-   "primary": [],
-   "methods": {},
-   "gt": null,
-   "link_only": true,
-   "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
+   "thumb": "static/images/flow/ant_4008/thumb.webp",
+   "primary": [
+    "stock",
+    "opera_combined"
+   ],
+   "methods": {
+    "stock": {
+     "status": "available",
+     "sketchfab_uid": "203dfe6b05f547d1b603129185189b49",
+     "poster": "static/images/flow/ant_4008/stock.webp",
+     "note": "Paper-run mesh, decimated for the web (99,997 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99997
+    },
+    "structure": {
+     "status": "available",
+     "sketchfab_uid": "2918b68d45e04ce0897a0c9266d06c65",
+     "poster": "static/images/flow/ant_4008/structure.webp",
+     "note": "Paper-run mesh, decimated for the web (99,961 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99961
+    },
+    "material_only": {
+     "status": "available",
+     "sketchfab_uid": "a8edd89246f045029186088dae897abf",
+     "poster": "static/images/flow/ant_4008/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (99,996 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99996
+    },
+    "opera_combined": {
+     "status": "available",
+     "sketchfab_uid": "bb59032644ac4cd3a1477cdd45f796b4",
+     "poster": "static/images/flow/ant_4008/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (99,960 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 99960
+    }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "ad4372f0bdc940d4878cf6d9ae60e7ba",
+    "poster": "static/images/flow/ant_4008/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 4779626,
+    "original_author_model": true,
+    "source_url": "https://radar.kit.edu/radar/en/dataset/puntaegngsg4xss9",
+    "hosted_by_us": true,
+    "rights": "Reference scan hosted with attribution under its source licence (CC BY 4.0)."
+   }
   },
   {
    "id": "ant_392",
    "group": "B",
-   "name": "Sphinctomyrmex stali",
-   "short_name": "Sphinctomyrmex",
-   "credit": "AntScan micro-CT, specimen CASENT0790136 (CC BY 4.0).",
-   "source_url": "https://doi.org/10.35097/gxfhjcpm31nrzjwm",
+   "name": "Sphinctomyrmex stali (worker)",
+   "short_name": "Sphinctomyrmex stali",
+   "credit": "Sphinctomyrmex stali (worker). Karlsruhe Institute of Technology (KIT); Okinawa Institute of Science and Technology Graduate University (OIST). Source licence: CC BY 4.0.",
+   "source_url": "https://radar.kit.edu/radar/en/dataset/gxfhjcpm31nrzjwm",
    "native_gallery": "https://ood-results.vercel.app/#ant_392",
+   "note": "Selected example from the cross-domain campaign. Models were regenerated at full resolution with the same recipe; they are not the paper-run meshes.",
    "input": "static/images/flow/ant_392/input.webp",
-   "thumb": "static/images/flow/ant_392/input.webp",
-   "primary": [],
-   "methods": {},
-   "gt": null,
-   "link_only": true,
-   "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
+   "thumb": "static/images/flow/ant_392/thumb.webp",
+   "primary": [
+    "stock",
+    "opera_combined"
+   ],
+   "methods": {
+    "stock": {
+     "status": "available",
+     "sketchfab_uid": "b832c297a84148029a4ab6a68ee29f59",
+     "poster": "static/images/flow/ant_392/stock.webp",
+     "note": "Regenerated at full resolution with the same recipe; not the paper-run mesh itself.",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 937994
+    },
+    "structure": {
+     "status": "available",
+     "sketchfab_uid": "9bd7c3ca01a8463fa82bce8751d80a7f",
+     "poster": "static/images/flow/ant_392/structure.webp",
+     "note": "Regenerated at full resolution with the same recipe; not the paper-run mesh itself.",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 991284
+    },
+    "material_only": {
+     "status": "available",
+     "sketchfab_uid": "b7fa020ad0f14f4bb5a81904301d650b",
+     "poster": "static/images/flow/ant_392/material_only.webp",
+     "note": "Regenerated at full resolution with the same recipe; not the paper-run mesh itself.",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 930966
+    },
+    "opera_combined": {
+     "status": "available",
+     "sketchfab_uid": "9fea523a664442a7a8f7ba1f617c11b6",
+     "poster": "static/images/flow/ant_392/opera_combined.webp",
+     "note": "Regenerated at full resolution with the same recipe; not the paper-run mesh itself.",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 990878
+    }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "0630dfb32965494da89ffccd00e84a04",
+    "poster": "static/images/flow/ant_392/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": 2597144,
+    "original_author_model": true,
+    "source_url": "https://radar.kit.edu/radar/en/dataset/gxfhjcpm31nrzjwm",
+    "hosted_by_us": true,
+    "rights": "Reference scan hosted with attribution under its source licence (CC BY 4.0)."
+   }
   },
   {
    "id": "ov13_10_lymphatic_system",
@@ -418,15 +591,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "14800d739ecb46678d7584a401b0aa77",
+    "sketchfab_uid": "a91d8df068cf4be2a8f34be64150a48e",
     "poster": "static/images/flow/ov13_10_lymphatic_system/gt.webp",
-    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "note": "Reference scan.",
     "frame_note": "",
     "pending_note": "",
     "triangles": 994272,
     "original_author_model": true,
     "source_url": "https://sketchfab.com/3d-models/14800d739ecb46678d7584a401b0aa77",
-    "rights": "Shown through the original public Sketchfab model of its author."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC BY-NC-SA 4.0)."
    }
   },
   {
@@ -434,32 +608,134 @@
    "group": "C",
    "name": "Occipital AVM",
    "short_name": "Occipital AVM",
-   "credit": "Model by jorgegonzalezcantero on Sketchfab (CC BY 4.0).",
-   "source_url": "https://sketchfab.com/3d-models/occipital-avm-f7aa60639c60483f8e82fc182d2b0514",
+   "credit": "Occipital AVM. jorgegonzalezcantero. Source licence: CC Attribution.",
+   "source_url": "https://sketchfab.com/3d-models/f7aa60639c60483f8e82fc182d2b0514",
    "native_gallery": "https://ood-results.vercel.app/#f7aa60639c60483f8e82fc182d2b0514",
+   "note": "Selected example from the cross-domain campaign. Models are the paper-run meshes as released for the web (reduced detail).",
    "input": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/input.webp",
-   "thumb": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/input.webp",
-   "primary": [],
-   "methods": {},
-   "gt": null,
-   "link_only": true,
-   "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
+   "thumb": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/thumb.webp",
+   "primary": [
+    "stock",
+    "opera_combined"
+   ],
+   "methods": {
+    "stock": {
+     "status": "available",
+     "sketchfab_uid": "9fa5f4d7261c48abb86d6601f8ec95f9",
+     "poster": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/stock.webp",
+     "note": "Paper-run mesh, decimated for the web (963,139 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 963139
+    },
+    "structure": {
+     "status": "available",
+     "sketchfab_uid": "7a41a8781b6d4e39ab4d5367a3100aac",
+     "poster": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/structure.webp",
+     "note": "Paper-run mesh, decimated for the web (997,973 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 997973
+    },
+    "material_only": {
+     "status": "available",
+     "sketchfab_uid": "a9853c6e651a4d6d8831d87d71d4316b",
+     "poster": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (961,575 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 961575
+    },
+    "opera_combined": {
+     "status": "available",
+     "sketchfab_uid": "edd9139dd7d1410e87f2603e2b7fd818",
+     "poster": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (999,525 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 999525
+    }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "6b334ee5f248464cb2e42f1a81efd2ef",
+    "poster": "static/images/flow/f7aa60639c60483f8e82fc182d2b0514/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": null,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/f7aa60639c60483f8e82fc182d2b0514",
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC BY 4.0)."
+   }
   },
   {
    "id": "e903b83694d5455da1d71c2943dd7bab",
    "group": "C",
    "name": "Tetralogy of Fallot with MAPCAs",
    "short_name": "Tetralogy of Fallot",
-   "credit": "Model by 3D Heart Project on Sketchfab (CC BY 4.0).",
-   "source_url": "https://sketchfab.com/3d-models/tetralogy-of-fallot-with-mapcas-e903b83694d5455da1d71c2943dd7bab",
+   "credit": "Tetralogy of Fallot with MAPCAs. 3D Heart Project. Source licence: CC Attribution.",
+   "source_url": "https://sketchfab.com/3d-models/e903b83694d5455da1d71c2943dd7bab",
    "native_gallery": "https://ood-results.vercel.app/#e903b83694d5455da1d71c2943dd7bab",
+   "note": "Selected example from the cross-domain campaign. Models are the paper-run meshes as released for the web (reduced detail).",
    "input": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/input.webp",
-   "thumb": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/input.webp",
-   "primary": [],
-   "methods": {},
-   "gt": null,
-   "link_only": true,
-   "note": "Interactive models for this object are in the cross-domain results gallery (TRELLIS.2 and OPERA Combined, with ground truth); they are not hosted on this page yet."
+   "thumb": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/thumb.webp",
+   "primary": [
+    "stock",
+    "opera_combined"
+   ],
+   "methods": {
+    "stock": {
+     "status": "available",
+     "sketchfab_uid": "da18fc42121a443e95ee94a23522e3c9",
+     "poster": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/stock.webp",
+     "note": "Paper-run mesh, decimated for the web (957,436 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 957436
+    },
+    "structure": {
+     "status": "available",
+     "sketchfab_uid": "d3139e6068044809a4cae3b73b877499",
+     "poster": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/structure.webp",
+     "note": "Paper-run mesh, decimated for the web (929,430 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 929430
+    },
+    "material_only": {
+     "status": "available",
+     "sketchfab_uid": "12fc9ddc7046430686eb3a4f16136cbf",
+     "poster": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (957,541 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 957541
+    },
+    "opera_combined": {
+     "status": "available",
+     "sketchfab_uid": "4d7c8a46b78c481e9db7bb887afcf557",
+     "poster": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (928,536 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 928536
+    }
+   },
+   "gt": {
+    "status": "available",
+    "sketchfab_uid": "ad82ed6010ab46cea963f71a9ff4c644",
+    "poster": "static/images/flow/e903b83694d5455da1d71c2943dd7bab/gt.webp",
+    "note": "Reference scan.",
+    "frame_note": "",
+    "pending_note": "",
+    "triangles": null,
+    "original_author_model": true,
+    "source_url": "https://sketchfab.com/3d-models/e903b83694d5455da1d71c2943dd7bab",
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC BY 4.0)."
+   }
   },
   {
    "id": "si05_corallium",
@@ -469,7 +745,7 @@
    "credit": "Corallium secundum. Smithsonian Institution, National Museum of Natural History; record nmnhinvertebratezoology_32871. Source licence: Smithsonian Open Access, CC0 (usage.access field); see methods.gt.",
    "source_url": "https://3d.si.edu/object/3d/corallium-secundum%3A4b9420ab-6c2d-432e-9140-ee866175dc87",
    "native_gallery": "https://ood-results.vercel.app/#si05_corallium",
-   "note": "Selected example. Some methods are not shown for this object: our stored outputs could not be matched to the versions in the research gallery, which remains the reference for them.",
+   "note": "Selected example. The TRELLIS.2 baseline and some OPERA results shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si05_corallium/input.webp",
    "thumb": "static/images/flow/si05_corallium/thumb.webp",
    "primary": [
@@ -481,10 +757,10 @@
      "status": "available",
      "sketchfab_uid": "fb7a3cdb44b34e7d8e4a2b836018efe4",
      "poster": "static/images/flow/si05_corallium/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (11,940 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 989348
+     "triangles": 11940
     },
     "structure": {
      "status": "guided",
@@ -496,16 +772,22 @@
      "triangles": 981614
     },
     "material_only": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "2ab96aa9c58f4bd1ab110a427a06d78c",
+     "poster": "static/images/flow/si05_corallium/material_only.webp",
+     "note": "Paper-run mesh, decimated for the web (11,939 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11939
     },
     "opera_combined": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "0ca2cdcde538400f8ffe8b32e52ed21a",
+     "poster": "static/images/flow/si05_corallium/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (11,955 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11955
     },
     "reconviagen_v0.5": {
      "status": "available",
@@ -528,15 +810,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "5b4e6ccd75bc46618b18843324f8fae5",
     "poster": "static/images/flow/si05_corallium/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 150000,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "https://3d.si.edu/object/3d/corallium-secundum%3A4b9420ab-6c2d-432e-9140-ee866175dc87",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
@@ -547,7 +830,7 @@
    "credit": "Subhyracodon gidleyi Wood, 1927. Smithsonian Institution, National Museum of Natural History; record nmnhpaleobiology_3427838. Source licence: Smithsonian Open Access, CC0 (usage.access field); see methods.gt.",
    "source_url": "http://n2t.net/ark:/65665/37c6e7ac3-f28e-4a7f-8730-954b74608719",
    "native_gallery": "https://ood-results.vercel.app/#si25_17_subhyracodon_gidleyi_wood_1927",
-   "note": "Selected example.",
+   "note": "Selected example. The TRELLIS.2 baseline shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/input.webp",
    "thumb": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/thumb.webp",
    "primary": [
@@ -559,10 +842,10 @@
      "status": "available",
      "sketchfab_uid": "9f902b8e1c59401ba3b83a4d0030d363",
      "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (12,000 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 981934
+     "triangles": 12000
     },
     "structure": {
      "status": "guided",
@@ -612,15 +895,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "161f004e6db2444ba34c023efd9116a0",
     "poster": "static/images/flow/si25_17_subhyracodon_gidleyi_wood_1927/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 150000,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "http://n2t.net/ark:/65665/37c6e7ac3-f28e-4a7f-8730-954b74608719",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
@@ -631,7 +915,7 @@
    "credit": "Geochelone carbonaria. Smithsonian Institution, National Museum of Natural History; record nmnhvz_6341612. Source licence: Smithsonian Open Access, CC0 (usage.access field); see methods.gt.",
    "source_url": "http://n2t.net/ark:/65665/32d93c49f-3eab-4fa5-8d8f-0a172ef3fcdc",
    "native_gallery": "https://ood-results.vercel.app/#si25v2_c38_geochelone_carbonaria",
-   "note": "Selected example. Some methods are not shown for this object: our stored outputs could not be matched to the versions in the research gallery, which remains the reference for them.",
+   "note": "Selected example. The TRELLIS.2 baseline and some OPERA results shown here are the paper-run meshes of the cross-domain campaign, decimated for the web (about 12k faces); the other models are full-resolution outputs.",
    "input": "static/images/flow/si25v2_c38_geochelone_carbonaria/input.webp",
    "thumb": "static/images/flow/si25v2_c38_geochelone_carbonaria/thumb.webp",
    "primary": [
@@ -643,16 +927,19 @@
      "status": "available",
      "sketchfab_uid": "876ccd9aaa674a6cb7289380a8ad976f",
      "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/stock.webp",
-     "note": "",
+     "note": "Paper-run mesh, decimated for the web (11,589 faces).",
      "frame_note": "",
      "pending_note": "",
-     "triangles": 965192
+     "triangles": 11589
     },
     "structure": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "31a620f6ca61448ebfeb4612f6a4ae6e",
+     "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/structure.webp",
+     "note": "Paper-run mesh, decimated for the web (11,997 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11997
     },
     "material_only": {
      "status": "guided",
@@ -664,10 +951,13 @@
      "triangles": 966145
     },
     "opera_combined": {
-     "status": "held",
-     "status_label": "not shown here",
-     "sketchfab_uid": "",
-     "note": "Not shown: our stored output could not be matched to the version in the research gallery."
+     "status": "available",
+     "sketchfab_uid": "e149af048356408f943849760bfbcb9a",
+     "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/opera_combined.webp",
+     "note": "Paper-run mesh, decimated for the web (11,995 faces).",
+     "frame_note": "",
+     "pending_note": "",
+     "triangles": 11995
     },
     "reconviagen_v0.5": {
      "status": "available",
@@ -690,15 +980,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "",
+    "sketchfab_uid": "cdca62327db74d43b41279c287b03c66",
     "poster": "static/images/flow/si25v2_c38_geochelone_carbonaria/gt.webp",
     "note": "Reference scan.",
     "frame_note": "",
-    "pending_note": "Reference scan: shown as a still; see the source link for the original.",
+    "pending_note": "",
     "triangles": 149992,
-    "original_author_model": false,
+    "original_author_model": true,
     "source_url": "http://n2t.net/ark:/65665/32d93c49f-3eab-4fa5-8d8f-0a172ef3fcdc",
-    "rights": "Not hosted here: redistribution terms of the source scan are unresolved; still of the reference scan shown."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC0)."
    }
   },
   {
@@ -774,15 +1065,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "2f4f2bd7ed9a4ce6b10ac0d1fdec8257",
+    "sketchfab_uid": "b1a01a1698c845fab50285f0341bcb09",
     "poster": "static/images/flow/ov13_03_badge_of_the_black_prince/gt.webp",
-    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "note": "Reference scan.",
     "frame_note": "",
     "pending_note": "",
     "triangles": 224488,
     "original_author_model": true,
     "source_url": "https://sketchfab.com/3d-models/2f4f2bd7ed9a4ce6b10ac0d1fdec8257",
-    "rights": "Shown through the original public Sketchfab model of its author."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC BY-NC-SA 4.0)."
    }
   },
   {
@@ -866,6 +1158,7 @@
     "triangles": 3999999,
     "original_author_model": true,
     "source_url": "https://sketchfab.com/3d-models/6626abe1f3e8469a9d8f4b74d8aa2a71",
+    "hosted_by_us": false,
     "rights": "Shown through the original public Sketchfab model of its author."
    }
   },
@@ -942,15 +1235,16 @@
    },
    "gt": {
     "status": "available",
-    "sketchfab_uid": "41e23659c75241459eec6477d9e77c93",
+    "sketchfab_uid": "4d9f55c35f2744a38284694c65f06be2",
     "poster": "static/images/flow/ov13_02_armillary_sphere_1771/gt.webp",
-    "note": "Original model on its author's Sketchfab page, in the author's own orientation.",
+    "note": "Reference scan.",
     "frame_note": "",
     "pending_note": "",
     "triangles": 308898,
     "original_author_model": true,
     "source_url": "https://sketchfab.com/3d-models/41e23659c75241459eec6477d9e77c93",
-    "rights": "Shown through the original public Sketchfab model of its author."
+    "hosted_by_us": true,
+    "rights": "Reference model hosted by us with attribution under its source licence (CC BY 4.0)."
    }
   }
  ]

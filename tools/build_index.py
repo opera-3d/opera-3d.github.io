@@ -35,9 +35,9 @@ html = f'''<!doctype html>
   <meta name="color-scheme" content="light">
   <title>OPERA · Perceptual alignment for instance-faithful single-image 3D generation</title>
   <link rel="icon" href="static/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="static/style.css?v=20261119a">
+  <link rel="stylesheet" href="static/style.css?v=20261119b">
   <script src="static/app.js?v=20261117" defer></script>
-  <script src="static/gallery.js?v=20261119a" defer></script>
+  <script src="static/gallery.js?v=20261119b" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -95,7 +95,7 @@ html = f'''<!doctype html>
         </div>
         <div class="fg-more"><p class="fg-more-label">More comparisons</p><div class="choice-row fg-methods" role="group" aria-label="Show another method"></div></div>
         <p class="reference-note fg-status" aria-live="polite"></p>
-        <p class="reference-note">The ground truth is always shown next to the results: the original author’s model where one is public, otherwise a still of the reference scan. Each viewer is an independent Sketchfab embed: cameras are not synchronised, and models keep the frame they were generated in. For matched-camera views and the surface-normal row, use the research gallery linked above. ReconViaGen and Hi3DGen are external methods run at their release settings; Hi3DGen outputs geometry only.</p>
+        <p class="reference-note">The ground truth is always shown next to the results: the reference model itself, hosted on our Sketchfab account under its source licence with attribution (one model is too large to host and is shown from its author’s page). Baseline and filled results marked “decimated for the web” are reduced-detail copies of the paper-run meshes. Each viewer is an independent Sketchfab embed: cameras are not synchronised, and models keep the frame they were generated in. For matched-camera views and the surface-normal row, use the research gallery linked above. ReconViaGen and Hi3DGen are external methods run at their release settings; Hi3DGen outputs geometry only.</p>
         <noscript><p>The interactive gallery requires JavaScript. The models are listed in the <a href="https://sketchfab.com/idea0907/collections/3f8664bfe9414ad69461e8f6b0f23a47">Sketchfab collection</a>.</p></noscript>
       </div>
 
